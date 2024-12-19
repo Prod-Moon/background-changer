@@ -1,0 +1,174 @@
+
+//IMPORTING POPPINS FONT FROM GOOGLE 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//VARIABLES
+:root {
+    --BG-COLOR: rgb(220, 223, 230);
+    --WHITESMOKE: whitesmoke;
+    --NAVBAR-COLOR: rgb(69, 69, 179);
+    --RED: red;
+    --GREEN: green;
+    --ORANGE: orange;
+}
+body {
+    background-color: var(--BG-COLOR);
+    font-size: 1.2rem;
+    
+}
+header {
+    position: relative;
+}
+.navBar {
+    
+    & ul {
+        position: absolute;
+        background: radial-gradient(whitesmoke, var(--BG-COLOR));
+        list-style-type: none;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+    }
+    & ul div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+    & a:any-link {
+        text-decoration: none;
+        color: black;
+    }
+    & ul li {
+        margin: 45px 0;
+        font-size: clamp(1.3rem, 0.762rem + 2.462vw, 1.5rem);
+        padding: 5px;
+        transition: 0.2s;
+    }
+    & li:hover, & li:focus {
+        background-color: var(--NAVBAR-COLOR);
+        color: whitesmoke;  
+    }
+     & ul div span {   
+        position: absolute;
+        right: 0; 
+        top: 7px;
+        margin: 10px 20px 0 0;
+        cursor: pointer;
+    } 
+
+    & .navBarHero {
+        background-color: var(--NAVBAR-COLOR);
+    }
+    & .navBarHero h2 {
+        font-size: .9em;
+    }
+    & .navBarMargin {
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        align-items: center;
+    }
+    & .navBarSymbols {
+        display: flex;
+        gap: 20px;
+
+        & .material-symbols-outlined {
+            background-color: rgba(0, 0, 0, 0.11);
+            padding: 7px;
+            cursor: pointer;
+        }
+    }
+
+    & .colorPalette {
+        background-color: white;
+        width: 200px;
+        height: 105px;
+        position: absolute;
+        top: 45px;
+        right: 27px;
+        display: none;
+
+        & .default {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+
+            & .defaultBack {
+                background-color: rgba(0, 0, 0, 0.178);
+                cursor: pointer;
+                font-size: .8em;
+                padding: 5px;
+            }
+        }
+
+        & .red, & .green, & .orange {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+        }
+        & .red:active, & .green:active, & .orange:active {
+            filter: contrast(75%);
+        }
+    }
+    & .red {
+        background-color: var(--RED);
+        box-shadow: 0 0 0 2px var(--WHITESMOKE),
+                    0 0 0 4px var(--RED);
+    }
+    & .green {
+        background-color: var(--GREEN);
+        box-shadow: 0 0 0 2px var(--WHITESMOKE),
+                    0 0 0 4px var(--GREEN);
+    }
+    & .orange {
+        background-color: var(--ORANGE);
+        box-shadow: 0 0 0 2px var(--WHITESMOKE),
+                    0 0 0 4px var(--ORANGE);
+    }
+    & .colors {
+        display: flex;
+        gap: 15px;
+        margin: 15px;
+
+        & div {
+            cursor: pointer;
+        }
+    }
+}
+
+main{
+    margin: 0 20px;
+    margin-top: 30%;
+    
+    & h1 span {
+        color: var(--NAVBAR-COLOR);
+    }
+    & p {
+        margin: 20px 0 35px 0; 
+    }
+    & .btn {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 7px 20px;
+        background-color: var(--NAVBAR-COLOR);
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    & .btn:active {
+        filter: contrast(75%);
+    }
+}
